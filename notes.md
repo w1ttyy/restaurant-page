@@ -90,3 +90,10 @@ npm install --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugi
   → http://localhost:8080, auto-reload on save. Builds in memory – does NOT create `dist/`.
 - Server blocks the terminal → open a second terminal (+) for git. Stop server with Ctrl+C.
 - Console output: browser F12 → Console.
+
+## 6. Homepage hard-coded in HTML
+
+- Write homepage content inside `<div id="content">` in `template.html` first – easier to design layout and CSS before moving it to JS.
+- Use classes for styling (`class="..."`) – later set in JS with `classList.add()`, CSS stays the same.
+- Local images in HTML (`<img src="./images/x.jpg">`) need `html-loader` – I skipped it, so images will be added via JS import instead.
+- Images go to `src/images/`. Free photos: Unsplash, Pexels (credit the author).
