@@ -71,3 +71,22 @@ npm install --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugi
 
 - `HtmlWebpackPlugin` is a class → needs `new`.
 - After changing the config, restart `npx webpack serve` (Ctrl+C, run again).
+
+## 5. src files + dev server
+
+- PowerShell has no `touch`. Create files/folders with:
+  ```
+  mkdir src
+  New-Item src/index.js, src/template.html, src/styles.css
+  ```
+  (`ni` = short alias for `New-Item`; errors if the file already exists – harmless)
+- `template.html`: `<header>` → `<nav>` → `<button>`s (not links – JS swaps content on one page), then empty `<div id="content">`.
+- Do NOT put `<script>` (HtmlWebpackPlugin injects it) or `<link rel="stylesheet">` (CSS comes via JS import) in the template.
+- `index.js` must `import "./styles.css";` – webpack only knows files reachable through imports from `entry` (side-effect import).
+- Run dev server:
+  ```
+  npx webpack serve
+  ```
+  → http://localhost:8080, auto-reload on save. Builds in memory – does NOT create `dist/`.
+- Server blocks the terminal → open a second terminal (+) for git. Stop server with Ctrl+C.
+- Console output: browser F12 → Console.
