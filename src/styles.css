@@ -24,8 +24,19 @@ nav button {
     font-size: 16px;
     border: solid #4e4e4e66 2px;
     background-color: #92929266;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: inherit;
+    cursor: pointer;
+}
 
+nav button:hover {
+    background-color: #b3b3b366;
+
+}
+
+
+
+.slogan {
+    font-size: 18px;
 }
 
 
@@ -38,10 +49,10 @@ h2 {
 }
 
 p {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 ul {
-    margin-top: 10px;
+    margin-top: 5px;
     list-style: none;
 }
