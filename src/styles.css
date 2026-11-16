@@ -1,3 +1,13 @@
+:root {
+    --color-bg: #faf7f2;
+    --color-surface: #ffffff;
+    --color-text: #2b2b2b;
+    --color-muted: #6b6b6b;
+    --color-accent: #c0583a;
+    --color-accent-dark: #80351e;
+    --color-border: #e6dfd5;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -6,57 +16,139 @@
 }
 
 body {
-    background-color: #c9c9c966;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 10px;
+    background-color: var(--color-bg);
+    font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    line-height: 1.2;
+}
+
+header {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px;
 }
 
 nav {
-    margin: 20px;
     display: flex;
-    gap: 16px;
+    gap: 8px;
     justify-content: center;
 }
 
 nav button {
-    padding: 10px 30px;
-    border-radius: 10px;
-    font-size: 16px;
-    border: solid #4e4e4e66 2px;
-    background-color: #92929266;
-    font-family: inherit;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--color-text);
     cursor: pointer;
+    transition: var(--color-bg) 0.2s;
 }
 
 nav button:hover {
-    background-color: #b3b3b366;
-
+    background-color: var(--color-border);
 }
 
-
-
-.slogan {
-    font-size: 18px;
+nav button.active {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
 }
 
+#content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.home, .menu, .contact {
+    background-color: var(--color-surface);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
 
 h1 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 2.5rem;
+    color: var(--color-accent-dark);
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin: 32px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-accent);
+    font-size: 1.5rem;
 }
 
-p {
-    margin-bottom: 10px;
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
 }
 
-ul {
-    margin-top: 5px;
+.home {
+    text-align: center;
+}
+
+.home-slogan {
+    font-style: italic;
+    color: var(--color-muted);
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+.home-image {
+    display: block;
+    width: 240px;
+    max-width: 100%;
+    margin: 24px auto;
+}
+
+.home-hours-title {
+    margin-top: 32px;
+}
+
+.home-hours {
     list-style: none;
 }
 
-.food-image {
-    width: 200px;
+.menu-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item-price {
+    font-weight: bold;
+    color: var(--color-accent);
+    white-space: nowrap;
+}
+
+.menu-item-description {
+    grid-column: 1/-1;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.contact-address {
+    font-style: normal;
+}
+
+.contact a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
