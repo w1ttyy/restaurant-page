@@ -1,6 +1,6 @@
 import "./styles.css";
 import loadHome from "./home.js";
-
-console.log("Hello world!");
+import loadMenu from "./menu.js";
 
 loadHome();
+loadMenu();
