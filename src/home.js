@@ -1,4 +1,3 @@
-// <button>Domov</button><button>Menu</button><button>Kontakt</button>
 import restaurantImage from "./images/food.svg";
 
 const loadHome = function () {
