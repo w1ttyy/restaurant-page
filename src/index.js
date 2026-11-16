@@ -10,15 +10,7 @@ const contactButton = document.querySelector('[data-tab="contact"]');
 
 const switchTab = function (loadPage) {
   contentDiv.replaceChildren();
-  if (loadPage === loadHome) {
-    loadHome();
-  }
-  if (loadPage === loadMenu) {
-    loadMenu();
-  }
-  if (loadPage === loadContact) {
-    loadContact();
-  }
+  loadPage();
 };
 
 homeButton.addEventListener("click", () => switchTab(loadHome));

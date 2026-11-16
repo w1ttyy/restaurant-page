@@ -57,6 +57,11 @@ const loadMenu = function () {
   const menuDiv = document.createElement("div");
   menuDiv.classList.add("menu");
 
+  const menuTitlte = document.createElement("h1");
+  menuTitlte.classList.add("menu-title");
+  menuTitlte.textContent = "Menu";
+  menuDiv.append(menuTitlte);
+
   menuData.forEach((category) => {
     const categoryTitle = document.createElement("h2");
     categoryTitle.classList.add("menu-category-title");

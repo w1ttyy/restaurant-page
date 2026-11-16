@@ -7,25 +7,25 @@ const loadHome = function () {
   homeDiv.classList.add("home");
 
   const restaurantName = document.createElement("h1");
-  restaurantName.classList.add("name");
+  restaurantName.classList.add("home-title");
   restaurantName.textContent = "Bistro Varecha";
 
   const pSlogan = document.createElement("p");
-  pSlogan.classList.add("slogan");
+  pSlogan.classList.add("home-slogan");
   pSlogan.textContent = "Jedlo, ktoré sa varí a potom sa je";
 
   const pDesc1 = document.createElement("p");
-  pDesc1.classList.add("description");
+  pDesc1.classList.add("home-description");
   pDesc1.textContent =
     "Sme bistro. Máme kuchyňu, v kuchyni máme sporák a na sporáku varíme jedlo. Jedlo potom nosíme na stôl, kde ho hostia jedia. Takto to robíme každý deň, keď máme otvorené.";
 
   const pDesc2 = document.createElement("p");
-  pDesc2.classList.add("description-extra");
+  pDesc2.classList.add("home-description");
   pDesc2.textContent =
     "Naši kuchári vedia variť polievky, hlavné jedlá aj dezerty. Niekedy varíme aj niečo iné. Príďte k nám, sadnite si za stôl a my vám niečo prinesieme.";
 
   const openHoursHeading = document.createElement("h3");
-  openHoursHeading.classList.add("opening-heading");
+  openHoursHeading.classList.add("home-hours-title");
   openHoursHeading.textContent = "Otváracie hodiny:";
 
   const openingHours = [
@@ -34,7 +34,7 @@ const loadHome = function () {
     "Nedeľa: 11:00 - 20:00",
   ];
   const hoursList = document.createElement("ul");
-  hoursList.classList.add("opening-list");
+  hoursList.classList.add("home-hours");
   openingHours.forEach((day) => {
     const dayItem = document.createElement("li");
     dayItem.textContent = day;
@@ -43,17 +43,17 @@ const loadHome = function () {
 
   const foodImage = document.createElement("img");
   foodImage.src = restaurantImage;
-  foodImage.alt = "Jednoduchy obrazok jedla";
-  foodImage.classList.add("food-image");
+  foodImage.alt = "Ilustrácia taniera s jedlom";
+  foodImage.classList.add("home-image");
 
   homeDiv.append(
     restaurantName,
     pSlogan,
+    foodImage,
     pDesc1,
     pDesc2,
     openHoursHeading,
     hoursList,
-    foodImage,
   );
 
   contentDiv.appendChild(homeDiv);

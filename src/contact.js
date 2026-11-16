@@ -4,7 +4,7 @@ const loadContact = function () {
   const contactDiv = document.createElement("div");
   contactDiv.classList.add("contact");
 
-  const contactTitle = document.createElement("h2");
+  const contactTitle = document.createElement("h1");
   contactTitle.classList.add("contact-title");
   contactTitle.textContent = "Kontakt";
 
